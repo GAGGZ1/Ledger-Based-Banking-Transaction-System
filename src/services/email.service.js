@@ -1,3 +1,14 @@
+const emailEnabled = process.env.EMAIL_ENABLED !== 'false'; // Defaults to true if not set
+
+if (!emailEnabled) {
+  console.log('Email service disabled via EMAIL_ENABLED=false');
+  module.exports = {
+    sendEmail: () => Promise.resolve(), // No-op function
+    // Add other methods as needed
+  };
+  return;
+}
+
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
