@@ -5,6 +5,7 @@ const swaggerSpec = require("./config/swagger")
 
 const app = express()
 
+app.use(cors())
 
 app.use(express.json())
 app.use(cookieParser())
