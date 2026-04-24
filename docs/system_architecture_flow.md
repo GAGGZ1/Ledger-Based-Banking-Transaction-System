@@ -242,10 +242,3 @@ It mimics real-world banking systems using:
 
 ---
 
-# 🚀 Next Improvements
-
-- Add reversal transactions (refunds)
-- Add audit logs
-- Add rate limiting
-- Add monitoring (logs + alerts)
-- Convert to microservices
