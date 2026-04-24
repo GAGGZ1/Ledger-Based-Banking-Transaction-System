@@ -2,6 +2,7 @@ const express = require("express")
 const cookieParser = require("cookie-parser")
 const swaggerUi = require("swagger-ui-express")
 const swaggerSpec = require("./config/swagger")
+const cors = require("cors")
 
 const app = express()
 
