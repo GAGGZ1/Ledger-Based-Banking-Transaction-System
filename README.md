@@ -5,16 +5,29 @@ A production-ready REST API for a secure, distributed banking transaction system
 ---
 
 ## 📋 Table of Contents
+- [Quick Start](#quick-start)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Environment Setup](#environment-setup)
 - [Running the Application](#running-the-application)
+- [Swagger Documentation](#swagger-api-documentation)
+- [Postman Collection](#postman-collection)
 - [API Documentation](#api-documentation)
 - [Architecture](#architecture)
 - [Project Structure](#project-structure)
 - [Key Concepts](#key-concepts)
+
+---
+
+## 🚀 Quick Start
+
+Get started in 5 minutes! See [QUICKSTART.md](./QUICKSTART.md) for:
+- Step-by-step setup instructions
+- Common workflows
+- Testing the API with Swagger, Postman, or cURL
+- Troubleshooting guide
 
 ---
 
@@ -53,6 +66,12 @@ A production-ready REST API for a secure, distributed banking transaction system
   - Custom error responses
   - Graceful error handling
 
+- **Interactive API Documentation**
+  - Swagger/OpenAPI documentation
+  - Try-it-out functionality for all endpoints
+  - Complete request/response schemas
+  - Authentication testing built-in
+
 ---
 
 ## 🛠 Tech Stack
@@ -63,6 +82,7 @@ A production-ready REST API for a secure, distributed banking transaction system
 - JWT (JSON Web Tokens) for authentication
 - bcryptjs for password hashing
 - Nodemailer for email services
+- Swagger/OpenAPI for API documentation
 - dotenv for environment configuration
 
 **Database:**
@@ -147,7 +167,54 @@ Server is running on port 3000
 
 ---
 
-## 📚 API Documentation
+## � Swagger API Documentation
+
+Once the server is running, access the interactive API documentation:
+
+- **Swagger UI**: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+
+### Features:
+- ✅ **Try-it-Out**: Test all API endpoints directly from the browser
+- ✅ **Authentication**: Securely test protected endpoints with JWT tokens
+- ✅ **Schema Validation**: View complete request and response schemas
+- ✅ **Error Examples**: See all possible error responses
+- ✅ **Parameter Documentation**: Understand all query and path parameters
+
+### How to Use:
+1. Navigate to `http://localhost:3000/api-docs`
+2. Click **Authorize** button to add your JWT token
+3. Click **Try it out** on any endpoint
+4. Fill in required parameters
+5. Click **Execute** to test the endpoint
+6. View the response and response code
+
+---
+## 📮 Postman Collection
+
+Import the included Postman collection to test all API endpoints quickly:
+
+### Import Steps:
+1. Open **Postman**
+2. Click **Import** → **Upload Files**
+3. Select `postman_collection.json` from the project root
+4. Click **Import**
+
+### Pre-configured Features:
+- ✅ **Environment Variables**: BASE_URL, token, accountId
+- ✅ **Auto Token Extraction**: Login endpoint automatically saves JWT token
+- ✅ **Organized Endpoints**: Grouped by resource (Auth, Accounts, Transactions)
+- ✅ **Example Payloads**: All requests have sample data
+- ✅ **Tests**: Auto-capture response values for chaining requests
+
+### Typical Testing Flow:
+1. **Register** a new user
+2. **Login** (token auto-saved)
+3. **Create Account** (account ID auto-saved)
+4. **Get Account Balance**
+5. **Create Transaction** between accounts
+
+---
+## �📚 API Documentation
 
 ### Authentication Endpoints
 
