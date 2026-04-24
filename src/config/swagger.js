@@ -22,6 +22,9 @@ const options = {
         url: "https://api.example.com",
         description: "Production server (update with actual URL)",
       },
+      {
+    url: "https://ledger-based-banking-transaction-system.onrender.com"
+  }
     ],
     components: {
       securitySchemes: {
